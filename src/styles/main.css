@@ -33,6 +33,10 @@ body {
   padding: 0 15px;
 }
 
+.none__display {
+  display: none;
+}
+
 .info {
   display: flex;
   /* margin-top: 50px; */
