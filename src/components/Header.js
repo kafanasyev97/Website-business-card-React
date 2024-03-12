@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react'
 
 const Header = () => {
   return (
@@ -11,7 +11,7 @@ const Header = () => {
           rel="noreferrer"
         >
           <img
-            src="./images/icons8-телеграмма-app-48.png"
+            src="/images/icons8-телеграмма-app-48.png"
             alt="telegram"
             className="header__img"
           />
@@ -23,14 +23,14 @@ const Header = () => {
           rel="noreferrer"
         >
           <img
-            src="./images/icons8-github.svg"
+            src="/images/icons8-github.svg"
             alt="GitHub"
             className="header__img"
           />
         </a>
       </div>
     </header>
-  );
-};
+  )
+}
 
-export default Header;
+export default Header
