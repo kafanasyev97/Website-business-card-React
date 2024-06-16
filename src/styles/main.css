@@ -28,7 +28,6 @@ body {
 
 .header__nav {
   visibility: collapse;
-  padding-left: 40px;
   display: flex;
   gap: 20px;
 }
@@ -50,9 +49,45 @@ body {
   height: 40px;
 }
 
+.header__btn {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  position: relative;
+  margin-left: 15px;
+  z-index: 6;
+  top: 4px;
+}
+
+.header__btn-line {
+  position: absolute;
+  top: 10px;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  height: 2px;
+  transition: 0.3s ease;
+}
+
+.header__btn-line:nth-child(1) {
+  top: 5px;
+}
+.header__btn-line:nth-child(2) {
+  top: 15px;
+}
+.header__btn-line:nth-child(3) {
+  top: 15px;
+}
+.header__btn-line:nth-child(4) {
+  top: 25px;
+}
+
 .container {
   max-width: 1230px;
-  margin: 0 auto 0 calc(260 / 1920 * 100vw);
+  margin: 0 auto;
   padding: 0 15px;
 }
 
@@ -208,6 +243,14 @@ body {
 
 @media (max-width: 1500px) {
   .header__nav {
+    position: absolute;
+    left: 15px;
+    top: 70px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .header__nav.open {
     visibility: visible;
   }
 

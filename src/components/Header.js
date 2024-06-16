@@ -1,10 +1,23 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import { Link } from 'react-router-dom'
 
 const Header = () => {
+  const headerNav = useRef(null)
+  const burgerMenuClick = () => {
+    if (headerNav.current) {
+      headerNav.current.classList.toggle('open')
+    }
+  }
+
   return (
     <header className="header">
-      <div className="header__nav">
+      <button onClick={burgerMenuClick} class="header__btn" type="button">
+        <span class="header__btn-line"></span>
+        <span class="header__btn-line"></span>
+        <span class="header__btn-line"></span>
+        <span class="header__btn-line"></span>
+      </button>
+      <div ref={headerNav} className="header__nav">
         <Link className="header__nav-link" to="/">
           Home
         </Link>
