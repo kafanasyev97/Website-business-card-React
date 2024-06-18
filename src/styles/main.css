@@ -251,6 +251,7 @@ body {
     background-color: #130736;
     width: 190px;
     transition: transform 0.5s;
+    z-index: 10;
   }
 
   .header__nav.open {
