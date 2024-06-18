@@ -27,7 +27,6 @@ body {
 }
 
 .header__nav {
-  visibility: collapse;
   display: flex;
   gap: 20px;
 }
@@ -244,14 +243,18 @@ body {
 @media (max-width: 1500px) {
   .header__nav {
     position: absolute;
-    left: 15px;
+    left: -190px;
     top: 70px;
     display: flex;
     flex-direction: column;
+    padding-left: 20px;
+    background-color: #130736;
+    width: 190px;
+    transition: transform 0.5s;
   }
 
   .header__nav.open {
-    visibility: visible;
+    transform: translateX(183px);
   }
 
   .sidebar {
