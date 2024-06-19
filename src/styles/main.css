@@ -27,14 +27,14 @@ body {
 }
 
 .header__nav {
-  display: flex;
-  gap: 20px;
+  display: none;
 }
 
 .header__nav-link {
   text-decoration: none;
   color: #fff;
-  font-size: 20px;
+  font-size: 24px;
+  padding-left: 20px;
 }
 
 .header__socials {
@@ -49,39 +49,11 @@ body {
 }
 
 .header__btn {
-  display: inline-block;
-  width: 30px;
-  height: 30px;
-  background-color: transparent;
-  cursor: pointer;
-  border: none;
-  position: relative;
-  margin-left: 15px;
-  z-index: 6;
-  top: 4px;
+  visibility: collapse;
 }
 
-.header__btn-line {
-  position: absolute;
-  top: 10px;
-  left: 0;
-  width: 100%;
-  background-color: #fff;
-  height: 2px;
-  transition: 0.3s ease;
-}
-
-.header__btn-line:nth-child(1) {
-  top: 5px;
-}
-.header__btn-line:nth-child(2) {
-  top: 15px;
-}
-.header__btn-line:nth-child(3) {
-  top: 15px;
-}
-.header__btn-line:nth-child(4) {
-  top: 25px;
+.header__left-menu {
+  border-top: 1px solid green;
 }
 
 .container {
@@ -247,17 +219,53 @@ body {
     top: 70px;
     display: flex;
     flex-direction: column;
-    padding-left: 20px;
+    /* padding-left: 20px; */
     background-color: #211e24;
     width: 190px;
     height: 180px;
-    justify-content: space-between;
+    justify-content: space-evenly;
     transition: transform 0.5s;
     z-index: 10;
   }
 
   .header__nav.open {
     transform: translateX(183px);
+  }
+
+  .header__btn {
+    visibility: visible;
+    width: 30px;
+    height: 30px;
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
+    position: relative;
+    margin-left: 15px;
+    z-index: 6;
+    top: -1px;
+  }
+
+  .header__btn-line {
+    position: absolute;
+    top: 10px;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    height: 2px;
+    transition: 0.3s ease;
+  }
+
+  .header__btn-line:nth-child(1) {
+    top: 5px;
+  }
+  .header__btn-line:nth-child(2) {
+    top: 15px;
+  }
+  .header__btn-line:nth-child(3) {
+    top: 15px;
+  }
+  .header__btn-line:nth-child(4) {
+    top: 25px;
   }
 
   .sidebar {

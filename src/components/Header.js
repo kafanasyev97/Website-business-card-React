@@ -1,5 +1,6 @@
 import React, { useRef } from 'react'
 import { Link } from 'react-router-dom'
+import MenuLink from './MenuLink'
 
 const Header = () => {
   const headerNav = useRef(null)
@@ -17,17 +18,19 @@ const Header = () => {
         <span class="header__btn-line"></span>
         <span class="header__btn-line"></span>
       </button>
+
       <div ref={headerNav} className="header__nav">
-        <Link className="header__nav-link" to="/">
-          Home
-        </Link>
+        <MenuLink url="/">Home</MenuLink>
+        <div className="header__left-menu" />
         <Link className="header__nav-link" to="/about">
           About
         </Link>
+        <div className="header__left-menu" />
         <Link className="header__nav-link" to="/contacts">
           Contacts
         </Link>
       </div>
+
       <div className="header__socials">
         <a
           href="https://t.me/kirill_afanasyev97"
