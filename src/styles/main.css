@@ -277,9 +277,4 @@ body {
   .header__nav-link {
     font-size: 18px;
   }
-
-  .header__nav {
-    padding-left: 20px;
-    gap: 18px;
-  }
 }
