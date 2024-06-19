@@ -20,14 +20,20 @@ const Info = () => {
             />
           </div>
           <div className="info__text">
-            <h2 className="info__name">Kirill Afanasyev</h2>
-            <h3 className="info__title">
-              Developer with more than 1 year experience. Stack:
-            </h3>
-            <span className="info__main">- JavaScript (React, HTML + CSS)</span>
-            <span className="info__main">- TypeScript</span>
-            <span className="info__main">- Python (Django, FastApi)</span>
-            <span className="info__main">- SQL</span>
+            <div>
+              <h2 className="info__name">Kirill Afanasyev</h2>
+            </div>
+            <div className="info__main-info">
+              <h3 className="info__title">
+                Developer with more than 1 year experience. Stack:
+              </h3>
+              <span className="info__main">
+                - JavaScript (React, HTML + CSS)
+              </span>
+              <span className="info__main">- TypeScript</span>
+              <span className="info__main">- Python (Django, FastApi)</span>
+              <span className="info__main">- SQL</span>
+            </div>
           </div>
         </div>
       </div>
