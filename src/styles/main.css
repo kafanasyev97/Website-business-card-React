@@ -381,7 +381,7 @@ body {
 
 @media (max-width: 460px) {
   .info__name {
-    font-size: 35px;
+    font-size: 40px;
   }
 
   .info__text {
@@ -400,8 +400,5 @@ body {
 
   .info__main {
     font-size: 20px;
-  }
-  .info__name {
-    font-size: 35px;
   }
 }
