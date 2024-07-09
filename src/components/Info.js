@@ -25,7 +25,7 @@ const Info = () => {
             </div>
             <div className="info__main-info">
               <h3 className="info__title">
-                Developer with more than 1 year experience. Stack:
+                Developer with 1.5 years of experience. Stack:
               </h3>
               <span className="info__main">
                 - JavaScript (React, HTML + CSS)
