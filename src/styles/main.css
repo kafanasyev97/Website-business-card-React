@@ -374,6 +374,20 @@ body {
   .info__img {
     max-width: 532px;
   }
+
+  .info__main-info {
+    bottom: -250px;
+  }
+
+  .info__title {
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 643px) {
+  .info__main-info {
+    bottom: -300px;
+  }
 }
 
 @media (max-width: 560px) {
