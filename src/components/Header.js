@@ -4,19 +4,26 @@ import MenuLink from './MenuLink'
 
 const Header = () => {
   const headerNav = useRef(null)
-  const burgerMenuClick = () => {
+  const burgerMenuClick = (e) => {
     if (headerNav.current) {
       headerNav.current.classList.toggle('open')
+      e.stopPropagation()
     }
   }
+  document.addEventListener('click', (e) => {
+    if (headerNav.current && headerNav.current.classList.contains('open')) {
+      console.log(e)
+      headerNav.current.classList.remove('open')
+    }
+  })
 
   return (
     <header className="header">
-      <button onClick={burgerMenuClick} class="header__btn" type="button">
-        <span class="header__btn-line"></span>
-        <span class="header__btn-line"></span>
-        <span class="header__btn-line"></span>
-        <span class="header__btn-line"></span>
+      <button onClick={burgerMenuClick} className="header__btn" type="button">
+        <span className="header__btn-line"></span>
+        <span className="header__btn-line"></span>
+        <span className="header__btn-line"></span>
+        <span className="header__btn-line"></span>
       </button>
 
       <div ref={headerNav} className="header__nav">
