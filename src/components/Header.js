@@ -1,9 +1,17 @@
-import React, { useRef } from 'react'
+import React, { useEffect, useRef } from 'react'
 import { Link } from 'react-router-dom'
 import MenuLink from './MenuLink'
 
 const Header = () => {
   const headerNav = useRef(null)
+  useEffect(() => {
+    return () => {
+      if (headerNav.current && headerNav.current.classList.contains('open')) {
+        headerNav.current.classList.remove('open')
+      }
+    }
+  }, [])
+  console.log('aaaa')
   const burgerMenuClick = (e) => {
     if (headerNav.current) {
       headerNav.current.classList.toggle('open')
