@@ -4,26 +4,30 @@ import MenuLink from './MenuLink'
 
 const Header = () => {
   const headerNav = useRef(null)
+
   useEffect(() => {
+    document.addEventListener('click', closeMenu)
     return () => {
-      if (headerNav.current && headerNav.current.classList.contains('open')) {
-        headerNav.current.classList.remove('open')
-      }
+      document.removeEventListener('click', closeMenu)
     }
   }, [])
+
   console.log('aaaa')
+
   const burgerMenuClick = (e) => {
     if (headerNav.current) {
       headerNav.current.classList.toggle('open')
       e.stopPropagation()
     }
   }
-  document.addEventListener('click', (e) => {
+
+  const closeMenu = (e) => {
     if (headerNav.current && headerNav.current.classList.contains('open')) {
       console.log(e)
       headerNav.current.classList.remove('open')
     }
-  })
+  }
+  document.addEventListener('click', closeMenu)
 
   return (
     <header className="header">
@@ -35,13 +39,15 @@ const Header = () => {
       </button>
 
       <div ref={headerNav} className="header__nav">
-        <MenuLink url="/">Home</MenuLink>
+        <MenuLink onClick={closeMenu} url="/">
+          Home
+        </MenuLink>
         <div className="header__left-menu" />
-        <Link className="header__nav-link" to="/about">
+        <Link onClick={closeMenu} className="header__nav-link" to="/about">
           About
         </Link>
         <div className="header__left-menu" />
-        <Link className="header__nav-link" to="/contacts">
+        <Link onClick={closeMenu} className="header__nav-link" to="/contacts">
           Contacts
         </Link>
       </div>
