@@ -8,6 +8,7 @@ const Header = () => {
   useEffect(() => {
     document.addEventListener('click', closeMenu)
     return () => {
+      console.log('vvvv')
       document.removeEventListener('click', closeMenu)
     }
   }, [])
@@ -39,15 +40,13 @@ const Header = () => {
       </button>
 
       <div ref={headerNav} className="header__nav">
-        <MenuLink onClick={closeMenu} url="/">
-          Home
-        </MenuLink>
+        <MenuLink url="/">Home</MenuLink>
         <div className="header__left-menu" />
-        <Link onClick={closeMenu} className="header__nav-link" to="/about">
+        <Link className="header__nav-link" to="/about">
           About
         </Link>
         <div className="header__left-menu" />
-        <Link onClick={closeMenu} className="header__nav-link" to="/contacts">
+        <Link className="header__nav-link" to="/contacts">
           Contacts
         </Link>
       </div>
