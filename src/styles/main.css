@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+
 html {
   box-sizing: border-box;
 }
@@ -11,7 +13,6 @@ html {
 body {
   background-color: black;
   color: rgb(223, 208, 208);
-  /* font-family: "Inter"; */
 }
 
 .header {
@@ -224,6 +225,7 @@ body {
 .info__main-info {
   display: flex;
   flex-direction: column;
+  font-family: 'Nunito Sans', sans-serif;
 }
 /* ----------------------------------MEDIA----------------------------- */
 
@@ -362,7 +364,7 @@ body {
 
 @media (max-width: 771px) {
   .info__main-info {
-    bottom: -300px;
+    bottom: -275px;
   }
 }
 
@@ -375,9 +377,9 @@ body {
     max-width: 532px;
   }
 
-  .info__main-info {
+  /* .info__main-info {
     bottom: -250px;
-  }
+  } */
 
   .info__title {
     font-size: 32px;
@@ -409,7 +411,7 @@ body {
   }
 
   .info__main-info {
-    bottom: -280px;
+    bottom: -260px;
   }
 }
 
@@ -432,5 +434,25 @@ body {
 
   .info__main {
     font-size: 20px;
+  }
+
+  .info__main-info {
+    bottom: -240px;
+  }
+}
+
+@media (max-width: 345px) {
+  .info__main-info {
+    bottom: -250px;
+  }
+}
+
+@media (max-width: 333px) {
+  .info__title {
+    font-size: 24px;
+  }
+
+  .info__main {
+    font-size: 18px;
   }
 }
